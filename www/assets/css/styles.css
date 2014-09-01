@@ -1,1 +1,1 @@
-body{background-image:linear-gradient(to right,red,#f06d06);padding:0;margin:0;height:100%;font-family:Helvetica;text-align:center}body.correct{border:10px solid green}body.incorrect{border:10px solid #b21515;background-color:#eca5a5}.container{height:100%}
+body{background-color:#dda167;margin:0;height:100%;font-family:Helvetica;text-align:center}body.correct{border:10px solid green}body.incorrect{border:10px solid #b21515;background-color:#eca5a5}.container{height:100%}

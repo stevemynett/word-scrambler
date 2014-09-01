@@ -11,8 +11,15 @@ module.exports = function(grunt) {
           "www/assets/css/styles.css": "www/assets/less/styles.less"
         }
       }
+    },
+    watch: {
+      less: {
+        files: 'www/assets/less/**/*.less',
+        tasks: ['less']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };
