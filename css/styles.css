@@ -1,23 +1,23 @@
 body {
-	border: 10px solid #536cd6;
-	background-color: #c5c8d6;
-	padding: 0; 
-	margin: 0;
-	height: 100%;
-	font-family: Helvetica;
-	text-align: center;
+  border: 10px solid #536cd6;
+  background-color: #c5c8d6;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: Helvetica;
+  text-align: center;
 }
 
-	body.correct {
-		border: 10px solid green;
-	}
+  body.correct {
+    border: 10px solid green;
+  }
 
-	body.incorrect {
-		border: 10px solid #b21515;
-		background-color: #eca5a5;
-	}
+  body.incorrect {
+    border: 10px solid #b21515;
+    background-color: #eca5a5;
+  }
 
 
 .container {
-	height: 100%;
-}	
+  height: 100%;
+}
