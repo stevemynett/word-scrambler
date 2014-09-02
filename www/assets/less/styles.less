@@ -1,28 +1,58 @@
 // =============================================================
-// Import Utilities
+// Import Stuff
 @import "_utils/utils";
+@import "thirdParty/thirdParty";
 // =============================================================
 
+html {
+    .background-image(radial-gradient(circle, darken(@primaryColour, 5%) 0%,darken(@primaryColour, 15%) 100%));
+    color: darken(@primaryColour, 80%);
+    height: 100%;
+
+
+  &.incorrect {
+    .background-image(radial-gradient(circle, lighten(@incorrect, 5%) 0%, darken(@incorrect, 5%) 100%));
+  }
+}
 
 body {
-  /*border: 10px solid #536cd6;*/
-  background-color: @primary;
-  margin: 0;
-  height: 100%;
-  font-family: Helvetica;
+  font-family: @primaryFont;
+}
+
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
   text-align: center;
 }
 
-  body.correct {
-    border: 10px solid green;
-  }
+.title {
+  font-size: 48px;
+}
 
-  body.incorrect {
-    border: 10px solid #b21515;
-    background-color: #eca5a5;
-  }
+.scrambledNewWord {
+  letter-spacing: 5px;
+  display: inline-block;
+}
 
+.answer {
+  border: 0;
+  border-bottom: 2px solid darken(@primaryColour, 80%);
+  padding-bottom: 5px;
+  outline: none;
+  background-color: transparent;
+  letter-spacing: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+}
 
-.container {
-  height: 100%;
+.submitBtn {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 40px;
 }

@@ -1,11 +1,11 @@
 $(function() {
 
-
   /*
     Shuffles the letters in a word
     http://stackoverflow.com/questions/3943772/how-do-i-shuffle-the-characters-in-a-string-in-javascript
     @usage console.log("the quick brown fox jumps over the lazy dog".shuffle());
   */
+
   String.prototype.shuffle = function () {
       var a = this.split(""),
         n = a.length;
@@ -25,24 +25,31 @@ $(function() {
   // randomly generate the word
   var word = wordList[Math.floor(Math.random()*wordList.length)];
   var scrambledWord = word.shuffle().toLowerCase();
-  $('.scrambledNewWord').append(scrambledWord);
+  $('._scrambledNewWord').append(scrambledWord);
+
+  // input field should be the same width as hint
+  var scrambledWord = $('._scrambledNewWord'),
+      scrambledWordWidth = scrambledWord.width(),
+      answer = $('._answer');
+  answer.width(scrambledWordWidth);
 
   // read input from dom on submit
-  $('#submit').on('click', function() {
-    var submittedWord = $('.answer').val();
-    var body = $('body');
+  $('._submit').on('click', function() {
+    var submittedWord = $('._answer').val();
+    var html = $('html');
 
     // evaluate the word
     if (word.toLowerCase() == submittedWord.toLowerCase()) {
-      body.addClass('correct');
-      body.removeClass('incorrect');
+      html.addClass('correct');
+      html.removeClass('incorrect');
     } else {
-      body.addClass('incorrect');
-      body.removeClass('correct');
+      html.addClass('incorrect');
+      html.removeClass('correct');
     }
-  })
+  });
+
+
 
   // refresh the word
-
-  // $('#reset').on('click', generateWord());
+  // $('._reset').on('click', generateWord());
 });
